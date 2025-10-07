@@ -152,18 +152,6 @@ POST /api/projects/:id/members
    ```
    DELETE /api/projects/:id/members/:Id
    ```
-- **Code Submissions**
-```
-POST /api/submissions
-
-GET /api/projects/:id/submissions - List submissions
-
-POST /api/submissions/:id/approve - Approve submission
-
-POST /api/submissions/:id/request-changes - Request changes
-
-GET /api/submissions/:id/reviews - Review history
-```
 
 - **Comments**
 ```
