@@ -5,6 +5,8 @@ import authRoutes from "./routes/auth";
 import userRoutes from "./routes/users";
 import { authMiddleware, AuthRequest } from "./middleware/auth";
 import projectRoutes from "./routes/projects";
+import submissionRoutes from "./routes/submissions";
+import commentRoutes from "./routes/comments";
 
 
 const app = express();
@@ -15,6 +17,9 @@ app.use(express.json());
 app.use("/api/auth", authRoutes);
 app.use("/api/users", userRoutes);
 app.use("/api/projects", projectRoutes);
+app.use("/api/submissions", submissionRoutes);
+app.use("/api/comments", commentRoutes);
+
 
 app.get("/", (req, res) => {
   res.send("Collaborative Code Review API is running 🚀");
