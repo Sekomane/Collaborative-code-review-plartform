@@ -11,7 +11,6 @@ A **RESTful API** for managing code reviews and collaboration within development
 4. [Running the API](#running-the-api)  
 5. [API Endpoints](#api-endpoints)  
 6. [Error Handling](#error-handling)  
-7. [Screenshots](#screenshots)  
 
 ---
 
@@ -109,8 +108,7 @@ CREATE TABLE notifications (
 );
 
 ```
-
-4. run the server in development
+Run the server in development
 ```
 npm run dev
 ```
