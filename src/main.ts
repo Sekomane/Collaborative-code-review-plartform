@@ -7,7 +7,8 @@ import { authMiddleware, AuthRequest } from "./middleware/auth";
 import projectRoutes from "./routes/projects";
 import submissionRoutes from "./routes/submissions";
 import commentRoutes from "./routes/comments";
-
+import notificationRoutes from "./routes/notifications";
+import statsRoutes from "./routes/stats";
 
 const app = express();
 
@@ -19,7 +20,8 @@ app.use("/api/users", userRoutes);
 app.use("/api/projects", projectRoutes);
 app.use("/api/submissions", submissionRoutes);
 app.use("/api/comments", commentRoutes);
-
+app.use("/api/notifications", notificationRoutes);
+app.use("/api/stats", statsRoutes);
 
 app.get("/", (req, res) => {
   res.send("Collaborative Code Review API is running 🚀");
