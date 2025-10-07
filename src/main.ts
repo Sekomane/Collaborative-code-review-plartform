@@ -9,11 +9,14 @@ import submissionRoutes from "./routes/submissions";
 import commentRoutes from "./routes/comments";
 import notificationRoutes from "./routes/notifications";
 import statsRoutes from "./routes/stats";
+import { errorHandler } from "./middleware/errorHandler";
 
 const app = express();
 
 app.use(cors());
 app.use(express.json());
+
+app.use(errorHandler);
 
 app.use("/api/auth", authRoutes);
 app.use("/api/users", userRoutes);
